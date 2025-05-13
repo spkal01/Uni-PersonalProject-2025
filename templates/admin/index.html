@@ -1,0 +1,58 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+<div class="dashboard">
+    <h1>Welcome to the Admin Dashboard</h1>
+    <div class="stats-container">
+        <div class="stat-card">
+            <h2>Users</h2>
+            <p>{{total_users}}</p>
+        </div>
+        <div class="stat-card">
+            <h2>Admins</h2>
+            <p>{{total_admins}}</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .dashboard {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f9;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .stats-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .stat-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        width: 400px;
+        margin: 10px;
+    }
+
+    .stat-card h2 {
+        font-size: 18px;
+        color: #555;
+    }
+
+    .stat-card p {
+        font-size: 24px;
+        font-weight: bold;
+        color: #007bff;
+    }
+</style>
+{% endblock %}
